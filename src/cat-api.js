@@ -47,4 +47,6 @@ const fetchCatByBreed = (breedId) => {
         return
 }
 
+fetchBreeds()
+
 selectCat.addEventListener("input", () => fetchCatByBreed(selectCat.value))
