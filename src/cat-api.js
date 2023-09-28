@@ -4,6 +4,7 @@ axios.defaults.headers.common["live_oiJWdZviVlbnAIfHszSzp2umobU27xezVTg2ey2mGvs5
 const basic = "https://api.thecatapi.com/v1/"
 const selectCat = document.querySelector(".breed-select");
 const catBox = document.querySelector(".cat-info")
+let catObj = {};
 
 const fetchBreeds = () => {
     fetch(`${basic}breeds`)
