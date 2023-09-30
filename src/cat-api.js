@@ -35,6 +35,7 @@ const catsList = (catInfo) => {
         newCat.value = element.id
         newCat.textContent = element.name
     });
+    return
 }
 
 const fetchCatByBreed = (breedId) => {
@@ -60,7 +61,8 @@ const catInfo = (info, img) => {
         <h2>${info.name}</h2>
         <img src="${img.url}"height="400"></img>
         <p>${info.description}</p>
-        <p>${info.temperament}</p>`   
+        <p><b>Temperament: </b>${info.temperament}</p>`   
+    return
 }
 
 fetchBreeds()
