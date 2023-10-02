@@ -1,0 +1,2 @@
+.cat-info,.error{display:none}.loader{width:0;height:0;box-sizing:border-box;border:5px solid #fff;border-bottom-color:rgba(0,0,0,0);border-radius:50%;font-size:100px;animation:rotation 1.5s linear infinite;display:none;position:relative;top:5vh;left:5vw}@keyframes rotation{0%{transform:scale(1)}50%{transform:scale(2)}to{transform:scale(1)}}
+/*# sourceMappingURL=index.8d1b3ff4.css.map */
