@@ -3,20 +3,12 @@ const key = "live_oiJWdZviVlbnAIfHszSzp2umobU27xezVTg2ey2mGvs5e8u3PEIDjOEU4QlU78
 axios.defaults.headers.common['x-api-key'] = key
 
 const basic = "https://api.thecatapi.com/v1/"
-const loader = document.querySelector(".loader");
-const error = document.querySelector(".error");
 
-const fetchBreeds = (breedId) => {
+const fetchBreeds = () => {
     return axios
     .get(`${basic}breeds?api_key=${key}`)
     .then(response => {
-        if (!breedId) {
             return response.data; 
-        }
-        else {
-            const info = response.data.find(option => option.id === breedId)
-            return info; 
-        }
     })
     .catch(error => {
         error.style.display = "block"
@@ -30,11 +22,9 @@ const fetchCatByBreed = (breedId) => {
     .then(response => {
         return response.data[0]
     })
-    .catch(problem => {
-        loader.style.display = "none"
-        error.style.display = "block"
-        return console.log(problem)
+    .catch(error => {
+        return console.log(error)
     })
 }
 
-export {fetchBreeds, fetchCatByBreed, loader}
+export {fetchBreeds, fetchCatByBreed}

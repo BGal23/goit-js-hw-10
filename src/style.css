@@ -1,5 +1,31 @@
-.loader,
 .cat-info,
 .error {
     display: none;
 }
+
+.loader {
+    display: none;
+    font-size: 100px;
+    width: 0;
+    height: 0;
+    position: relative;
+    left: 5vw;
+    top: 5vh;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotation 1.5s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+    } 
